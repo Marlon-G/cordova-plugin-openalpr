@@ -27,7 +27,13 @@
         <source-file src="src/android/OpenALPR.java" target-dir="app/src/main/java/org/apache/cordova/openalpr"/>
         <source-file src="src/android/lib/jni" target-dir="app/src/main/java/com/openalpr"/>
         <source-file src="src/android/lib/util" target-dir="app/src/main/java/com/openalpr"/>
-        <source-file src="src/android/lib/armeabi-v7a" target-dir="app/src/main/jniLibs/"/>
+        <source-file src="src/android/lib/armeabi-v7a/libjpgt.so" target-dir="app/src/main/jniLibs/armeabi-v7a" />
+        <source-file src="src/android/lib/armeabi-v7a/liblept.so" target-dir="app/src/main/jniLibs/armeabi-v7a" />
+        <source-file src="src/android/lib/armeabi-v7a/libnativealpr.so" target-dir="app/src/main/jniLibs/armeabi-v7a" />
+        <source-file src="src/android/lib/armeabi-v7a/libopenalprjni.so" target-dir="app/src/main/jniLibs/armeabi-v7a" />
+        <source-file src="src/android/lib/armeabi-v7a/libopencv_java3.so" target-dir="app/src/main/jniLibs/armeabi-v7a" />
+        <source-file src="src/android/lib/armeabi-v7a/libpngt.so" target-dir="app/src/main/jniLibs/armeabi-v7a" />
+        <source-file src="src/android/lib/armeabi-v7a/libtess.so" target-dir="app/src/main/jniLibs/armeabi-v7a" />
         <source-file src="src/android/assets/runtime_data" target-dir="app/src/main/assets"/>
         <source-file src="src/openalpr.conf" target-dir="app/src/main/assets/runtime_data"/>
     </platform>
