@@ -20,6 +20,16 @@
     "cordova-android",
     "cordova-ios"
   ],
+  "engines": [
+		{
+			"name": "cordova",
+			"version": ">=5.0.0"
+		},
+		{
+			"name": "cordova-android",
+			"version": ">=5.0.0"
+		}
+	],
   "author": "Mick Vleeshouwer <mick@imick.nl> (https://imick.nl)",
   "contributors": [
     "Melvin Versluijs <melvin.versluijs@hotmail.com> (http://melvinversluijs.com)"
