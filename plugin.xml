@@ -11,7 +11,9 @@
     <author email="mick@imick.nl" href="https://imick.nl">
         Mick Vleeshouwer
     </author>
-
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
     <js-module name="OpenALPR" src="www/OpenALPR.js">
         <clobbers target="cordova.plugins.OpenALPR"/>
     </js-module>
