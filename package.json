@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iMicknl/cordova-plugin-openalpr.git"
+    "url": "git+https://github.com/Marlon-G/cordova-plugin-openalpr.git"
   },
   "keywords": [
     "cordova",
