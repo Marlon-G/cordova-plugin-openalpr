@@ -41,7 +41,8 @@ public class OpenALPR extends CordovaPlugin {
             try {
                 String imagePath = args.getString(0);
                 JSONObject options = args.getJSONObject(1);
-                this.scan(imagePath, options, callbackContext);
+                //this.scan(imagePath, options, callbackContext);
+                callbackContext.error("Error de prueba");
             } catch (JSONException e) {
                 //returnError("Could not read arguments", callbackContext);
                 callbackContext.error("Could not read arguments");
