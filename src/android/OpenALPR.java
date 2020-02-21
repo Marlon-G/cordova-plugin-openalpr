@@ -115,11 +115,11 @@ public class OpenALPR extends CordovaPlugin {
                 //returnError("Could not decode Base64 string.", callbackContext);
                 callbackContext.error("Could not decode Base64 string.");
             }
-                callbackContext.error("Decodificacion alcanzada");
 
             //Initialize new Alpr object.
             Alpr alpr = initAlpr(options, callbackContext);
             AlprResults results = null;
+                callbackContext.error("Inicializacion alcanzada");
 
             //Try to recognize plates.
             try {
