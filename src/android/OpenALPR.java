@@ -43,7 +43,8 @@ public class OpenALPR extends CordovaPlugin {
                 JSONObject options = args.getJSONObject(1);
                 this.scan(imagePath, options, callbackContext);
             } catch (JSONException e) {
-                returnError("Could not read arguments", callbackContext);
+                //returnError("Could not read arguments", callbackContext);
+                callbackContext.error("Could not read arguments");
             }
             return true;
         }
@@ -72,7 +73,8 @@ public class OpenALPR extends CordovaPlugin {
             //Make sure a image exists for given path.
             if (imagePath == null || imagePath.length() == 0 || ! new File(imagePath).isFile()) {
                 //Otherwise return an error.
-                returnError("No image found for given file path", callbackContext);
+                //returnError("No image found for given file path", callbackContext);
+                callbackContext.error("No image found for given file path");
             }
 
             //Initialize Alpr object.
@@ -84,7 +86,8 @@ public class OpenALPR extends CordovaPlugin {
                 results = alpr.recognize(imagePath);
             } catch (AlprException e) {
                 //Handle any errors.
-                returnError("Error during recognizing plates: " + e.getMessage(), callbackContext);
+                //returnError("Error during recognizing plates: " + e.getMessage(), callbackContext);
+                callbackContext.error("Error during recognizing plates: " + e.getMessage());
             }
 
             // Make sure to call this to release memory
@@ -95,11 +98,13 @@ public class OpenALPR extends CordovaPlugin {
                 response = buildResponse(results, response);
             } catch (JSONException e) {
                 //Properly handle any errors.
-                returnError("Error during building response: " + e.getMessage(), callbackContext);
+                //returnError("Error during building response: " + e.getMessage(), callbackContext);
+                callbackContext.error("Error during building response: " + e.getMessage());
             }
         } else if (imagePath.contains("content://")) {
             //This imagePath format is not supported please convert it to a proper file path.
-            returnError("ImagePath format is not supported.", callbackContext);
+            //returnError("ImagePath format is not supported.", callbackContext);
+            callbackContext.error("ImagePath format is not supported.");
         } else {
             //Else treat it as a base64 encoded string.
             //Decode string.
@@ -107,7 +112,8 @@ public class OpenALPR extends CordovaPlugin {
 
             //Return error if decoded array is empty.
             if (decoded.length == 0) {
-                returnError("Could not decode Base64 string.", callbackContext);
+                //returnError("Could not decode Base64 string.", callbackContext);
+                callbackContext.error("Could not decode Base64 string.");
             }
 
             //Initialize new Alpr object.
@@ -119,7 +125,8 @@ public class OpenALPR extends CordovaPlugin {
                 results = alpr.recognize(decoded);
             } catch (AlprException e) {
                 //Properly handle any errors.
-                returnError("Error during recognizing plates: " + e.getMessage(), callbackContext);
+                //returnError("Error during recognizing plates: " + e.getMessage(), callbackContext);
+                callbackContext.error("Error during recognizing plates: " + e.getMessage());
             }
 
             // Make sure to call this to release memory
@@ -130,7 +137,8 @@ public class OpenALPR extends CordovaPlugin {
                 response = buildResponse(results, response);
             } catch (JSONException e) {
                 //Properly handle any errors that may occur.
-                returnError("Error during building response: " + e.getMessage(), callbackContext);
+                //returnError("Error during building response: " + e.getMessage(), callbackContext);
+                callbackContext.error("Error during building response: " + e.getMessage());
             }
         }
 
@@ -155,7 +163,8 @@ public class OpenALPR extends CordovaPlugin {
             country = options.getString("country");
             amount = options.getInt("amount");
         } catch (JSONException e) {
-            returnError("Error while reading options: " + e.getMessage(), callbackContext);
+            //returnError("Error while reading options: " + e.getMessage(), callbackContext);
+            callbackContext.error("Error while reading options: " + e.getMessage());
         }
 
         // Copy assets/runtime_data to accessible Android data dir.
