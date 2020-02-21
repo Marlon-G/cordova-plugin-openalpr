@@ -176,9 +176,9 @@ public class OpenALPR extends CordovaPlugin {
 
         String runtime_dir = androidDataDir + File.separatorChar + "runtime_data";
         String conf_file = runtime_dir + File.separatorChar + "openalpr.conf";
-                callbackContext.error("Pre inicializacion: "+androidDataDir+"---"+runtime_dir+"---"+conf_file);
 
         Alpr alpr = new Alpr(country, conf_file, runtime_dir); //Make new ALPR object with country EU and the config files from assets.
+                callbackContext.error("Inicializacion paso 1");
         alpr.setTopN(amount);
 
         return alpr;
