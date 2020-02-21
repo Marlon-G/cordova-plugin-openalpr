@@ -53,17 +53,17 @@
         <source-file src="src/android/assets/runtime_data/config/au.conf" target-dir="src/assets/runtime_data/config"/>
         <source-file src="src/android/assets/runtime_data/config/br.conf" target-dir="src/assets/runtime_data/config"/>
         <source-file src="src/android/assets/runtime_data/config/br2.conf" target-dir="src/assets/runtime_data/config"/-->
-        <source-file src="src/android/assets/runtime_data/config/eu.conf" target-dir="src/assets/runtime_data/config"/>
+        <source-file src="src/android/assets/runtime_data/config/eu.conf" target-dir="assets/runtime_data/config"/>
         <!--source-file src="src/android/assets/runtime_data/config/fr.conf" target-dir="src/assets/runtime_data/config"/>
         <source-file src="src/android/assets/runtime_data/config/gb.conf" target-dir="src/assets/runtime_data/config"/>
         <source-file src="src/android/assets/runtime_data/config/in.conf" target-dir="src/assets/runtime_data/config"/>
         <source-file src="src/android/assets/runtime_data/config/kr.conf" target-dir="src/assets/runtime_data/config"/>
         <source-file src="src/android/assets/runtime_data/config/kr2.conf" target-dir="src/assets/runtime_data/config"/-->
-        <source-file src="src/android/assets/runtime_data/config/mx.conf" target-dir="src/assets/runtime_data/config"/>
+        <source-file src="src/android/assets/runtime_data/config/mx.conf" target-dir="assets/runtime_data/config"/>
         <!--source-file src="src/android/assets/runtime_data/config/sg.conf" target-dir="src/assets/runtime_data/config"/>
         <source-file src="src/android/assets/runtime_data/config/us.conf" target-dir="src/assets/runtime_data/config"/>
         <source-file src="src/android/assets/runtime_data/config/vn2.conf" target-dir="src/assets/runtime_data/config"/-->
-        <source-file src="src/openalpr.conf" target-dir="src/assets/runtime_data"/>
+        <source-file src="src/openalpr.conf" target-dir="assets/runtime_data"/>
     </platform>
 
     <!-- iOS -->
