@@ -27,7 +27,13 @@
         </config-file>
 
         <source-file src="src/android/OpenALPR.java" target-dir="src/org/apache/cordova/openalpr"/>
-        <source-file src="src/android/lib/jni" target-dir="src/com/openalpr"/>
+        <source-file src="src/android/lib/jni/Alpr.java" target-dir="src/com/openalpr/jni"/>
+        <source-file src="src/android/lib/jni/AlprCoordinate.java" target-dir="src/com/openalpr/jni"/>
+        <source-file src="src/android/lib/jni/AlprException.java" target-dir="src/com/openalpr/jni"/>
+        <source-file src="src/android/lib/jni/AlprPlate.java" target-dir="src/com/openalpr/jni"/>
+        <source-file src="src/android/lib/jni/AlprPlateResult.java" target-dir="src/com/openalpr/jni"/>
+        <source-file src="src/android/lib/jni/AlprRegionOfInterest.java" target-dir="src/com/openalpr/jni"/>
+        <source-file src="src/android/lib/jni/AlprResults.java" target-dir="src/com/openalpr/jni"/>
         <source-file src="src/android/lib/util" target-dir="src/com/openalpr"/>
         <source-file src="src/android/lib/armeabi-v7a/libjpgt.so" target-dir="libs/armeabi-v7a" />
         <source-file src="src/android/lib/armeabi-v7a/liblept.so" target-dir="libs/armeabi-v7a" />
