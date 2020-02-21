@@ -15,7 +15,7 @@
         <engine name="cordova" version=">=3.0.0" />
     </engines>
     <js-module name="OpenALPR" src="www/OpenALPR.js">
-        <clobbers target="cordova.plugins.OpenALPR"/>
+        <clobbers target="OpenALPR"/>
     </js-module>
 
     <!-- Android -->
