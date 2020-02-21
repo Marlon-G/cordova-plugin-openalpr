@@ -41,8 +41,7 @@ public class OpenALPR extends CordovaPlugin {
             try {
                 String imagePath = args.getString(0);
                 JSONObject options = args.getJSONObject(1);
-                //this.scan(imagePath, options, callbackContext);
-                callbackContext.error("Error de prueba");
+                this.scan(imagePath, options, callbackContext);
             } catch (JSONException e) {
                 //returnError("Could not read arguments", callbackContext);
                 callbackContext.error("Could not read arguments");
@@ -116,6 +115,7 @@ public class OpenALPR extends CordovaPlugin {
                 //returnError("Could not decode Base64 string.", callbackContext);
                 callbackContext.error("Could not decode Base64 string.");
             }
+                callbackContext.error("Decodificacion alcanzada");
 
             //Initialize new Alpr object.
             Alpr alpr = initAlpr(options, callbackContext);
